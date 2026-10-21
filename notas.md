@@ -115,4 +115,19 @@ Para que se muestre como si fuese un filtro y no afecte a la lista original dire
 
 Pues que afectaria a la tabla orignal directamente, hacinedo imposible volver a ver al orden original, si las demas funciones afectasen a la lista original también seria un peor
 
+## Mira tus datos
 
+### Escribe console.table(alumnos) en la consola. Apunta qué ves.
+
+Me sale la tabla de mi array
+
+### Prueba también console.table(alumnos.map(a => a.nota)).
+
+Me sale la lista pero solo con las notas
+
+| Que ocurre | Prediccion | Correcion |
+|---|---|---|
+| Que se ordena mal | Que se ordnea mal | notas.sort((x,y) => x - y) |
+| Se modifica la lista original | Se modifica la tabla original | Quitar el const y usar la original |
+| Sale error por el valor inicial y que el array esta vacio | Saldra error porque la tabla notas esta vacia (porque no existe) y no tiene un valor inicial el .reduce()  | Crear la tabla y añadir un ,0 al lado de la funcion de reduce |
+| Le ha salido bien pero sale un error de que no supo leer las propiedades de "nombre" | Sale error por la ubicación console.log y no saldria nada igualmente | Cambiar el signo <= por < |
