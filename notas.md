@@ -1,0 +1,44 @@
+| Función | Predicción | Resultado |
+|---|---|---|
+| a[0] | Saldra "x" | Sale "x" |
+| a[3] | No saldra nada  |  No sale  nada |
+| a.length | Saldra la longitud del array | Sale la longitud del array |
+| [1, "dos" , true].length | Saldra la longitu de esa array  | Sale la longitud de ese array |
+| const c = [1]; c.push(2); c | Metera el 2 en el array | Añade el 2 |
+| q.push(4) y mira p | Añadiran el 4 y el p no hace nada | Añade el 4 y el 5 |
+| let r = [...p]; r.push(5) y mira p | Añade el 5 y el 6 al array | Sale el 6 y la p no hace ningun cambio |
+| [10, 9, 1].sort() | Ordenara la array en el orden dado | Invierte el orden |
+| [10, 9, 1].sort(x, y) => (x - y) | No lo se | Lo ordena de menor a mayor |
+| n.push(4) | Añade el 4 al array |  |
+| n.pop() | Vacia el array | Quita el ultimo elemento agragado |
+| n.slice(0, 2) | Cambia de lugar el primer parametro | Muestra los elementos en segun la posición pedida |
+| n.map(x => x * 2) | Multiplica el de posicion x | Multiplica todo por 2 |
+
+<br>
+
+## 1. ¿Qué da a[3] si el array solo tiene 3 elementos? ¿Por qué?
+
+Error, porque el indice empiza por 0 entonces deberia de haber 4 elementos
+
+<br>
+
+
+## 2. ¿Por qué q.push(4) cambió p y r.push(5) no? Explica qué es copiar y qué es referenciar.
+
+Porque p es otro nombre del array llamado q, entonces al cambiar el valor con q también cambia en p, y no cambia en el r.push() porque el elemento r es uno diferente y no tiene nada que ver con el elemento p.
+Copiar trata sobre que se duplica fisicamente un elemento y esta copia puede sufrir cambios sin que la original los sufra o viceversa, y el referenciar es simplemente añadir una forma mas de llamar al elemento y este SI sufre los cambios que sufra el original,porque no es una copia sino un "alias" 
+
+<br>
+
+
+## 3. ¿Por qué [10, 9, 1].sort() no dio [1, 9, 10]?
+
+Porque no tiene parametros que cambien el tipo de orden, como en el otro caso si hubiese una resta indicativa el sort utilizaria algun tipo de logica, en cambio, este comando hace que se ordene por texto y como en el 10 se lee antes el 1, el calculo lo pone primero
+
+<br>
+
+## 4. De los cuatro métodos del bloque D, ¿cuáles cambian el array y cuáles devuelven uno nuevo?
+
+Los que cambian el array original son: n.push() y n.pop(), y quien entrega un array completamente nuevo es el n.map() y el .slice()
+
+<br>
