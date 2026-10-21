@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="estilos.css"> 
+    <title>Document</title>
+</head>
+<body>
+    
+     <main>
+    <h1>Notas de la clase</h1>
+ 
+    <section aria-labelledby="titulo-resumen">
+      <h2 id="titulo-resumen">Resumen</h2>
+      <dl id="resumen"></dl>
+    </section>
+ 
+    <section aria-labelledby="titulo-alumnos">
+      <h2 id="titulo-alumnos">Alumnos</h2>
+ 
+      <div class="controles">
+        <label>
+          Mostrar
+          <select id="filtro">
+            <option value="todos">Todos</option>
+            <option value="aprobados">Aprobados</option>
+            <option value="suspensos">Suspensos</option>
+          </select>
+        </label>
+ 
+        <label>
+          Ordenar por
+          <select id="orden">
+            <option value="nombre">Nombre</option>
+            <option value="nota-desc">Nota más alta primero</option>
+            <option value="nota-asc">Nota más baja primero</option>
+          </select>
+        </label>
+      </div>
+ 
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Nota</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo"></tbody>
+      </table>
+    </section>
+ 
+    <section aria-labelledby="titulo-anadir">
+      <h2 id="titulo-añadir">Añadir alumno</h2>
+ 
+      <form id="formulario" novalidate>
+        <label>
+          Nombre
+          <input type="text" name="nombre" autocomplete="off">
+        </label>
+        <label>
+          Nota
+          <input type="text" name="nota" inputmode="decimal" autocomplete="off">
+        </label>
+        <button type="submit">Añadir</button>
+      </form>
+ 
+      <p id="mensaje" role="alert"></p>
+    </section>
+  </main>
+ 
+  <script src="notas.js"></script>
+  <script src="app.js"></script>
+    
+</body>
+</html>

@@ -107,4 +107,12 @@ Me devuelve true, no me lo parece, porque si no hay un numero no se deberia pode
 
 <br>
 
+## 1. ¿Por qué filtrarAlumnos y ordenarAlumnos devuelven copias?
+
+Para que se muestre como si fuese un filtro y no afecte a la lista original directamente
+
+## 2. ¿Qué pasaría en la página si ordenarAlumnos cambiara la lista original?
+
+Pues que afectaria a la tabla orignal directamente, hacinedo imposible volver a ver al orden original, si las demas funciones afectasen a la lista original también seria un peor
+
 

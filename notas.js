@@ -9,7 +9,7 @@ const AlumnosIniciales = [
     {nombre: "Elena", nota: 6.75 },
     {nombre: "Hugo", nota: 9 },
     {nombre: "Sara", nota: 1 },
-    {nombre: "Ivan", nota: 5.5 },
+    {nombre: "Ivan", nota: 5.5 }
 
 ]
 
@@ -27,7 +27,7 @@ function quitarUltimo(AlumnosIniciales){
 function buscarPorNombre(AlumnosIniciales, nombre){
 
     return AlumnosIniciales.find(
-        alumno => alumno.nombre === nombre
+        alumno => alumno.nombre == nombre
     );
 
 }
@@ -70,10 +70,10 @@ function ordenarPorNota(AlumnosIniciales) {
 
 
 const lista = [
- /* { nombre: "Ana", nota: 7.5 },
+  { nombre: "Ana", nota: 7.5 },
   { nombre: "Luis", nota: 4 },
   { nombre: "Marta", nota: 9.25 },
-  { nombre: "Pablo", nota: 5 }*/
+  { nombre: "Pablo", nota: 5 }
 ];
 
 
@@ -111,4 +111,36 @@ function todosAprobados(lista) {
 
 function ranking(lista, n) {
   return [...lista].sort((a, b) => b.nota - a.nota).slice(0, n);
+}
+
+function filtrarAlumnos(lista, filtro) {
+  if (filtro === "aprobados") {
+    return aprobados(lista);
+  }
+  if (filtro === "suspensos") {
+    return lista.filter(alumno => alumno.nota < 5);
+  }
+  return [...lista];
+}
+ 
+function ordenarAlumnos(lista, criterio) {
+  if (criterio === "nombre") {
+    return ordenarPorNombre(lista);
+  }
+  if (criterio === "nota-desc") {
+    return ordenarPorNota(lista);
+  }
+  if (criterio === "nota-asc") {
+
+    return ordenarPorNota(lista).reverse();
+  }
+  return [...lista];
+}
+ 
+function esNotaValida(texto) {
+  if (texto.trim() === "") {
+    return false;
+  }
+  const numero = Number(texto);
+  return !Number.isNaN(numero) && numero >= 0 && numero <= 10;
 }
