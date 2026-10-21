@@ -42,3 +42,69 @@ Porque no tiene parametros que cambien el tipo de orden, como en el otro caso si
 Los que cambian el array original son: n.push() y n.pop(), y quien entrega un array completamente nuevo es el n.map() y el .slice()
 
 <br>
+
+| Cambian la lista | No cambian la lista |
+|---|---|
+| añadirAlumno, insertarEn, borrarPorNombre, quitarUltimo | buscarPorNombre, ordenraPorNombre, ordenarPorNota |
+
+<br>
+
+## 1. ¿Qué funciones de esta fase cambian la lista y cuáles no? ¿Cómo lo sabes?
+
+| Cambian la lista | No cambian la lista |
+|---|---|
+| añadirAlumno, insertarEn, borrarPorNombre, quitarUltimo | buscarPorNombre, ordenraPorNombre, ordenarPorNota |
+
+Lo se por sus resultados en las pruebas
+
+<br>
+
+## 2. ¿Por qué ordenarPorNota hace una copia antes de ordenar?
+
+Porque el enunciado no quiere que se cambie la original entonces se crea una copia y asi la original no se ve afectada
+
+<br>
+
+## 3. ¿Qué pasaría con las notas 10, 9 y 1 si no usaras una función de comparación?
+
+Que el orden seria por el numero del primer digito, en este caso el 10 iria primero
+
+<br>
+
+### Dos experimentos
+### 1.Prueba todas las funciones con una lista vacía. Apunta qué devuelve cada una.
+
+Puse una foto en el docx
+
+<br>
+
+### 2. Quita el valor inicial del reduce de notaMedia y pruébala con la lista vacía. Apunta qué error sale. Después vuelve a ponerlo.
+
+Salta el error: "VM1077:5 Uncaught TypeError: Reduce of empty array with no initial value
+    at Array.reduce (<anonymous>)
+    at notaMedia2 (<anonymous>:5:22)
+    at <anonymous>:1:1
+notaMedia2	@	VM1077:5
+(anonymous)	@	VM1082:1"
+
+<br>
+
+## 1. ¿Por qué reduce necesita un valor inicial cuando la lista está vacía?
+
+Porque sino no hay donde acumular los calculos del acumulador y no se podra ejecutar el codigo
+
+<br>
+
+## 2. ¿Qué devuelve todosAprobados con una lista vacía? ¿Te parece lógico? Explícalo.
+
+Me devuelve true, no me lo parece, porque si no hay un numero no se deberia poder ejecutar, ademas de que cunado hay un vacio se le asinga ese vacio el valor de 0 cuando son numeros y eso no es mayor que cero
+
+<br>
+
+## 3. ¿Qué diferencia hay entre map y filter? Pon un ejemplo de tu código.
+
+.map() devuelve una copia exacta del array, en cambio, el .filter() devuelve los elementos de un array bajo unas condiciones y solo devuelve las que lo cumplen
+
+<br>
+
+
